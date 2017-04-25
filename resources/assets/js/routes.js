@@ -4,9 +4,18 @@ let routes = [
   {
     path: '/',
     component: require('./views/Home')
+  },
+  {
+    path: '/about',
+    component: require('./views/About')
+  },
+  {
+    path: '/contact',
+    component: require('./views/Contact')
   }
 ];
 
 export default new VueRouter({
-  routes
+  routes,
+  linkActiveClass: 'is-active'
 });
