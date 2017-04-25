@@ -11,6 +11,6 @@ window.axios = axios;
 window.axios.defaults.headers.common = {
   'X-Requested-With' : 'XMLHttRequest'
 };
-window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
+
 
 
