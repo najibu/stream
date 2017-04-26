@@ -4226,6 +4226,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             statuses: []
         };
     },
+
+
+    filters: {
+        ago: function ago(date) {
+            return __WEBPACK_IMPORTED_MODULE_0_moment___default()(date).fromNow();
+        },
+        capitalize: function capitalize(value) {
+            return value.toUpperCase();
+        }
+    },
+
     created: function created() {
         var _this = this;
 
@@ -4233,13 +4244,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         __WEBPACK_IMPORTED_MODULE_1__models_Status__["a" /* default */].all(function (statuses) {
             return _this.statuses = statuses;
         });
-    },
-
-
-    methods: {
-        postedOn: function postedOn(status) {
-            return __WEBPACK_IMPORTED_MODULE_0_moment___default()(status.created_at).fromNow();
-        }
     }
 });
 
@@ -4594,7 +4598,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: "message"
     }, [_c('div', {
       staticClass: "message-header"
-    }, [_c('p', [_vm._v("\n                        " + _vm._s(status.user.name) + " said...\n                    ")]), _vm._v(" "), _c('p', [_vm._v("\n                        " + _vm._s(_vm.postedOn(status)) + "\n                    ")])]), _vm._v(" "), _c('div', {
+    }, [_c('p', [_vm._v("\n                        " + _vm._s(status.user.name) + " said...\n                    ")]), _vm._v(" "), _c('p', [_vm._v("\n                        " + _vm._s(_vm._f("capitalize")(_vm._f("ago")(status.created_at))) + "\n                    ")])]), _vm._v(" "), _c('div', {
       staticClass: "message-body",
       domProps: {
         "textContent": _vm._s(status.body)
