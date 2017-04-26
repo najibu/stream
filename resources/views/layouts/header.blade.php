@@ -43,13 +43,13 @@
         My Stream
       </h1>
       <h2 class="subtitle">
-        Demo
+        Laracasts Demo
       </h2>
     </div>
   </div>
 
   <!-- Hero footer: will stick at the bottom -->
   <div class="hero-foot">
-    @include('layouts.nav')
+    @include ('layouts.nav')
   </div>
 </section>
