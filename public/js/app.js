@@ -4233,7 +4233,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return __WEBPACK_IMPORTED_MODULE_0_moment___default()(date).fromNow();
         },
         capitalize: function capitalize(value) {
-            return value.toUpperCase();
+            return value.toLowerCase();
         }
     },
 

@@ -38,7 +38,7 @@
             },
 
             capitalize(value) {
-                return value.toUpperCase();
+                return value.toLowerCase();
             }
         },
 
